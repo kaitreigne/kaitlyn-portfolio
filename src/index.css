@@ -1,0 +1,102 @@
+:root {
+  --primary: #ec4899;
+  --primary-hover: #db2777;
+
+  --bg-main: #1a0b14;
+  --bg-soft: #2a0f1f;
+  --card: rgba(255, 255, 255, 0.05);
+
+  --text: #fdf2f8;
+  --muted: #fbcfe8;
+
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ec489933, transparent 40%),
+              linear-gradient(180deg, #1a0b14 0%, #2a0f1f 100%);
+  color: var(--text);
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* CONTAINER */
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* TEXT */
+.section-text {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* CARD (GLASS EFFECT 💅) */
+.card {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(236, 72, 153, 0.2);
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 22px;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.4);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  padding: 12px 22px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
