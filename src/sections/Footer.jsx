@@ -33,10 +33,10 @@ const Footer = () => {
           <a href="#" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://www.facebook.com/kaitreigne" target="_blank" rel="noreferrer">
             Facebook
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/kaitlyn-reigne-s-109721292/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>

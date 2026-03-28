@@ -8,8 +8,9 @@ const Hero = () => {
 
   return (
     <section
+      id="home"
       style={{
-        padding: "100px 0",
+        padding: "140px 0", // improved spacing
         position: "relative",
         overflow: "hidden",
         background: "linear-gradient(180deg, #1a0b14 0%, #2a0f1f 100%)",
@@ -22,10 +23,10 @@ const Hero = () => {
           alignItems: "center",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          gap: "40px",
+          gap: "50px",
         }}
       >
-        {/* LEFT SIDE (TEXT) */}
+        {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
@@ -35,32 +36,50 @@ const Hero = () => {
             minWidth: "300px",
           }}
         >
-          <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
-            Hi, I’m <span style={{ color: "#ec4899" }}>Kaitlyn</span>
+          {/* NAME */}
+          <h1
+            style={{
+              fontSize: "clamp(2.8rem, 5vw, 3.8rem)",
+              marginBottom: "10px",
+              lineHeight: "1.2",
+            }}
+          >
+            Hi, I’m{" "}
+            <span
+              style={{
+                color: "#ec4899",
+                textShadow: "0 0 20px rgba(236,72,153,0.5)", // glow effect
+              }}
+            >
+              Kaitlyn
+            </span>
           </h1>
 
+          {/* ROLE */}
           <h2
             style={{
-              fontSize: "36px",
-              color: "#ec4899",
+              fontSize: "28px",
+              color: "#f472b6",
               marginBottom: "20px",
-              fontWeight: "bold",
+              fontWeight: "600",
             }}
           >
-            IT Developer
+            Aspiring IT Developer
           </h2>
 
+          {/* DESCRIPTION */}
           <p
             style={{
-              maxWidth: "500px",
-              lineHeight: "1.7",
-              marginBottom: "30px",
+              maxWidth: "520px",
+              lineHeight: "1.8",
+              marginBottom: "35px",
               color: "#fbcfe8",
+              fontSize: "16px",
             }}
           >
-            I build modern web and mobile applications focused on usability,
-            performance, and real-world solutions. Passionate about creating
-            systems that make a difference.
+            I create modern web and mobile applications focused on usability,
+            performance, and real-world solutions. I enjoy building systems
+            that are both functional and impactful.
           </p>
 
           {/* BUTTONS */}
@@ -69,13 +88,13 @@ const Hero = () => {
               View Projects
             </a>
 
-            <a href="#projects" className="btn-outline">
-              Download Resume
+            <a href="#about" className="btn-outline">
+              About Me
             </a>
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE (IMAGE) */}
+        {/* RIGHT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
@@ -88,7 +107,7 @@ const Hero = () => {
             position: "relative",
           }}
         >
-          {/* 💖 SOFT GLOW */}
+          {/* 💖 GLOW BACKGROUND */}
           <div
             style={{
               position: "absolute",
@@ -102,8 +121,15 @@ const Hero = () => {
             }}
           ></div>
 
-          {/* IMAGE BOX */}
-          <div
+          {/* IMAGE WITH FLOAT + HOVER */}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            whileHover={{ scale: 1.03 }} // hover zoom 🔥
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
             style={{
               position: "relative",
               zIndex: 1,
@@ -111,6 +137,7 @@ const Hero = () => {
               overflow: "hidden",
               width: "420px",
               height: "520px",
+              boxShadow: "0 20px 60px rgba(236,72,153,0.25)", // depth 🔥
             }}
           >
             <img
@@ -123,11 +150,11 @@ const Hero = () => {
                 height: "100%",
                 objectFit: "cover",
                 objectPosition: "center",
-                transition: "0.4s ease",
+                transition: "all 0.4s ease", // smoother 🔥
               }}
             />
 
-            {/* 💖 SEAMLESS FADE */}
+            {/* FADE */}
             <div
               style={{
                 position: "absolute",
@@ -137,10 +164,9 @@ const Hero = () => {
                 height: "160px",
                 background:
                   "linear-gradient(to top, #2a0f1f 0%, #1a0b14 40%, transparent 100%)",
-                pointerEvents: "none",
               }}
             ></div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

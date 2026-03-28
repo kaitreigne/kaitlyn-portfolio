@@ -15,12 +15,16 @@ const Navbar = () => {
         style={{
           display: "flex",
           justifyContent: "space-between",
+          alignItems: "center",
           padding: "18px 0",
         }}
       >
+        {/* LOGO */}
         <h2 style={{ color: "#ec4899" }}>Kaitlyn</h2>
 
-        <div style={{ display: "flex", gap: "25px" }}>
+        {/* LINKS */}
+        <div style={{ display: "flex", gap: "30px" }}>
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
         </div>
