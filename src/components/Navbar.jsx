@@ -16,14 +16,16 @@ const Navbar = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "18px 0",
+          padding: "10px 0", // 👈 mas maliit na
         }}
       >
         {/* LOGO */}
-        <h2 style={{ color: "#ec4899" }}>Kaitlyn</h2>
+        <h2 style={{ color: "#ec4899", fontSize: "20px" }}>
+          Kaitlyn
+        </h2>
 
         {/* LINKS */}
-        <div style={{ display: "flex", gap: "30px" }}>
+        <div style={{ display: "flex", gap: "25px" }}>
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>

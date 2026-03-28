@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import KaitlynImg from "../assets/Kaitlyn.png";
-import KaitlynImg2 from "../assets/Kaitlyn2.png";
 
 const Hero = () => {
-  const [isHover, setIsHover] = useState(false);
-
   return (
     <section
       id="home"
       style={{
-        padding: "140px 0", // improved spacing
+        padding: "140px 0",
         position: "relative",
         overflow: "hidden",
         background: "linear-gradient(180deg, #1a0b14 0%, #2a0f1f 100%)",
@@ -48,7 +44,7 @@ const Hero = () => {
             <span
               style={{
                 color: "#ec4899",
-                textShadow: "0 0 20px rgba(236,72,153,0.5)", // glow effect
+                textShadow: "0 0 20px rgba(236,72,153,0.5)",
               }}
             >
               Kaitlyn
@@ -107,7 +103,7 @@ const Hero = () => {
             position: "relative",
           }}
         >
-          {/* 💖 GLOW BACKGROUND */}
+          {/* GLOW */}
           <div
             style={{
               position: "absolute",
@@ -121,10 +117,10 @@ const Hero = () => {
             }}
           ></div>
 
-          {/* IMAGE WITH FLOAT + HOVER */}
+          {/* IMAGE */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
-            whileHover={{ scale: 1.03 }} // hover zoom 🔥
+            whileHover={{ scale: 1.05 }} // 🔥 hover zoom
             transition={{
               duration: 4,
               repeat: Infinity,
@@ -137,20 +133,18 @@ const Hero = () => {
               overflow: "hidden",
               width: "420px",
               height: "520px",
-              boxShadow: "0 20px 60px rgba(236,72,153,0.25)", // depth 🔥
+              boxShadow: "0 20px 60px rgba(236,72,153,0.25)",
             }}
           >
             <img
-              src={isHover ? KaitlynImg2 : KaitlynImg}
+              src={KaitlynImg}
               alt="Kaitlyn"
-              onMouseEnter={() => setIsHover(true)}
-              onMouseLeave={() => setIsHover(false)}
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
                 objectPosition: "center",
-                transition: "all 0.4s ease", // smoother 🔥
+                transition: "all 0.4s ease",
               }}
             />
 
