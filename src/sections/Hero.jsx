@@ -36,8 +36,7 @@ const Hero = () => {
           }}
         >
           <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
-            Hi, I’m{" "}
-            <span style={{ color: "#ec4899" }}>Kaitlyn</span>
+            Hi, I’m <span style={{ color: "#ec4899" }}>Kaitlyn</span>
           </h1>
 
           <h2
@@ -70,7 +69,7 @@ const Hero = () => {
               View Projects
             </a>
 
-            <a href="#" className="btn-outline">
+            <a href="#projects" className="btn-outline">
               Download Resume
             </a>
           </div>
@@ -123,7 +122,7 @@ const Hero = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                objectPosition: "center", // 👈 centered ka na
+                objectPosition: "center",
                 transition: "0.4s ease",
               }}
             />
