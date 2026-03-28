@@ -68,10 +68,10 @@ const Projects = () => {
             </p>
 
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href="#" className="btn">
+              <a href="/" className="btn">
                 Live Demo
               </a>
-              <a href="#" className="btn-outline">
+              <a href="/" className="btn-outline">
                 GitHub
               </a>
             </div>

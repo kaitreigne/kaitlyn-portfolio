@@ -30,7 +30,7 @@ const Footer = () => {
 
         {/* LINKS */}
         <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="/" target="_blank" rel="noreferrer">
             GitHub
           </a>
           <a href="https://www.facebook.com/kaitreigne" target="_blank" rel="noreferrer">
