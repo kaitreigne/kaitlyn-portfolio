@@ -4,6 +4,10 @@ import Dart from "../assets/Dart.png";
 import PHP from "../assets/PHP.png";
 import Csharp from "../assets/Csharp.png";
 
+import Arduino from "../assets/Arduino.png";
+import RJ from "../assets/Rj.png";
+import Cyber from "../assets/Cyber.png";
+
 const Skills = () => {
   const devSkills = [
     {
@@ -36,17 +40,20 @@ const Skills = () => {
     {
       title: "Embedded Systems",
       desc: "Experience with Arduino and microcontroller-based projects.",
-      icon: "🟧",
+      icon: Arduino,
+      color: "#22c55e",
     },
     {
       title: "Networking",
       desc: "Knowledge in RJ45 cabling and network setup.",
-      icon: "🟥",
+      icon: RJ,
+      color: "#ef4444",
     },
     {
       title: "Cybersecurity",
       desc: "Understanding of basic cybersecurity principles.",
-      icon: "🟪",
+      icon: Cyber,
+      color: "#8b5cf6",
     },
   ];
 
@@ -55,7 +62,7 @@ const Skills = () => {
       <div className="container">
         <h2 className="section-title">Skills</h2>
 
-        {/* 🔥 DEVELOPMENT */}
+        {/* DEVELOPMENT */}
         <h3
           style={{
             textAlign: "center",
@@ -89,26 +96,16 @@ const Skills = () => {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
-              {/* ICON */}
-              <div
+              {/* 🔥 IMAGE WITH GLOW ONLY */}
+              <img
+                src={skill.icon}
+                alt={skill.title}
                 style={{
-                  width: "70px",
-                  height: "70px",
-                  margin: "0 auto 15px",
-                  borderRadius: "50%",
-                  background: "rgba(255,255,255,0.05)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: `0 0 25px ${skill.color}66`,
+                  width: "55px",
+                  marginBottom: "15px",
+                  filter: `drop-shadow(0 0 15px ${skill.color})`,
                 }}
-              >
-                <img
-                  src={skill.icon}
-                  alt={skill.title}
-                  style={{ width: "40px", height: "40px" }}
-                />
-              </div>
+              />
 
               <h3>{skill.title}</h3>
               <p style={{ fontSize: "14px", color: "#fbcfe8" }}>
@@ -118,7 +115,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* ⚙️ TECHNICAL */}
+        {/* TECHNICAL */}
         <h3
           style={{
             textAlign: "center",
@@ -142,7 +139,7 @@ const Skills = () => {
           {techSkills.map((skill, i) => (
             <motion.div
               key={i}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.05 }}
               style={{
                 width: "250px",
                 padding: "25px",
@@ -152,14 +149,16 @@ const Skills = () => {
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
-              <div
+              {/* 🔥 IMAGE WITH GLOW ONLY */}
+              <img
+                src={skill.icon}
+                alt={skill.title}
                 style={{
-                  fontSize: "40px",
-                  marginBottom: "10px",
+                  width: "55px",
+                  marginBottom: "15px",
+                  filter: `drop-shadow(0 0 15px ${skill.color})`,
                 }}
-              >
-                {skill.icon}
-              </div>
+              />
 
               <h3>{skill.title}</h3>
               <p style={{ fontSize: "14px", color: "#fbcfe8" }}>
