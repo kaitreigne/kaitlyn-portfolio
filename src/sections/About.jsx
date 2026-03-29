@@ -41,7 +41,7 @@ const About = () => {
     >
       <div className="container">
 
-        {/* 🔥 SECTION TITLE (FIXED) */}
+        {/* TITLE */}
         <h2
           style={{
             textAlign: "center",
@@ -86,30 +86,25 @@ const About = () => {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              {/* IMAGE */}
               <img
                 src={card.image}
                 alt={card.title}
                 style={{
                   width: "220px",
-                  height: "auto",
                   borderRadius: "12px",
                   marginBottom: "20px",
                 }}
               />
 
-              {/* TITLE */}
               <h3 style={{ fontSize: "22px", marginBottom: "10px" }}>
                 {card.title}
               </h3>
 
-              {/* CLICK INDICATOR */}
               <p
                 style={{
                   fontSize: "13px",
                   color: "#ff9ac9",
                   opacity: 0.8,
-                  letterSpacing: "0.5px",
                 }}
               >
                 Click to view details →
@@ -139,6 +134,7 @@ const About = () => {
             <div
               onClick={(e) => e.stopPropagation()}
               style={{
+                position: "relative", // 🔥 important for X positioning
                 background: "#1a0b14",
                 padding: "40px",
                 borderRadius: "20px",
@@ -147,9 +143,30 @@ const About = () => {
                 textAlign: "center",
                 border: "1px solid rgba(255,255,255,0.1)",
                 boxShadow: "0 0 50px rgba(255, 105, 180, 0.2)",
-                animation: "fadeIn 0.3s ease",
               }}
             >
+              {/* ❌ CLOSE (X) */}
+              <span
+                onClick={() => setActiveModal(null)}
+                style={{
+                  position: "absolute",
+                  top: "15px",
+                  right: "20px",
+                  fontSize: "20px",
+                  cursor: "pointer",
+                  color: "#fff",
+                  opacity: 0.7,
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.opacity = "1")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.opacity = "0.7")
+                }
+              >
+                ✕
+              </span>
+
               <h2 style={{ marginBottom: "20px" }}>
                 {activeModal.title}
               </h2>
@@ -157,21 +174,6 @@ const About = () => {
               <p style={{ color: "#ccc", lineHeight: "1.6" }}>
                 {activeModal.description}
               </p>
-
-              <button
-                onClick={() => setActiveModal(null)}
-                style={{
-                  marginTop: "25px",
-                  padding: "10px 20px",
-                  borderRadius: "10px",
-                  border: "none",
-                  background: "#ff4fa3",
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-              >
-                Close
-              </button>
             </div>
           </div>
         )}
