@@ -73,9 +73,7 @@ const Hero = () => {
               fontSize: "16px",
             }}
           >
-            I create modern web and mobile applications focused on usability,
-            performance, and real-world solutions. I enjoy building systems
-            that are both functional and impactful.
+            An adaptable and driven developer capable of building modern web and mobile applications with strong attention to usability and performance. Quick to learn new technologies, flexible in different roles, and ready to contribute effectively in real-world development environments.
           </p>
 
           {/* BUTTONS */}

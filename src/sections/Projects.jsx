@@ -2,6 +2,7 @@ import { useState } from "react";
 import Swade1 from "../assets/swade1.png";
 import Swade3 from "../assets/swade3.png";
 import FloraLogo from "../assets/FloraLogo.png";
+import PastaLogo from "../assets/PastaLogo.png"; // 👈 ADD THIS
 
 const slides = [
   { type: "image", src: Swade1 },
@@ -25,12 +26,11 @@ const Projects = () => {
   return (
     <section id="projects" style={{ padding: "100px 0" }}>
       
-      {/* 🔥 TITLE */}
       <div className="container">
         <h2 className="section-title">Featured Project</h2>
       </div>
 
-      {/* 🔥 SLIDES */}
+      {/* SLIDES */}
       <div
         style={{
           width: "100%",
@@ -40,7 +40,6 @@ const Projects = () => {
           marginBottom: "60px",
         }}
       >
-        {/* IMAGE OR VIDEO */}
         {slides[index].type === "image" ? (
           <img
             src={slides[index].src}
@@ -66,7 +65,7 @@ const Projects = () => {
           />
         )}
 
-        {/* LEFT CLICK */}
+        {/* LEFT */}
         <div
           onClick={prevSlide}
           style={{
@@ -80,7 +79,7 @@ const Projects = () => {
           }}
         />
 
-        {/* RIGHT CLICK */}
+        {/* RIGHT */}
         <div
           onClick={nextSlide}
           style={{
@@ -122,7 +121,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* 🔥 SWADE CONTENT (CENTERED BALANCED) */}
+      {/* SWADE */}
       <div
         style={{
           maxWidth: "1000px",
@@ -132,38 +131,24 @@ const Projects = () => {
         }}
       >
         <h3 style={{ marginBottom: "15px", fontSize: "28px" }}>
-          SWADE — Sidewalk Accessibility System
+          SWADE — Sidewalk Accessibility through Data-driven Evaluation using Machine Learning
         </h3>
 
         <p className="section-text" style={{ marginBottom: "15px", lineHeight: "1.8" }}>
           SWADE is a mobile and web-based system that evaluates sidewalk
           accessibility for persons with disabilities using machine learning.
-          It analyzes sidewalks based on width, obstructions, damages, and
-          ramp conditions.
         </p>
 
         <p className="section-text" style={{ marginBottom: "20px", lineHeight: "1.8" }}>
-          The system integrates <strong>YOLOv8</strong> for obstacle detection
-          and <strong>Vision Transformer (ViT)</strong> for damage classification,
-          providing scalable and data-driven insights for urban accessibility
-          improvements.
+          Uses <strong>YOLOv8</strong> and <strong>ViT</strong> for detection and classification.
         </p>
 
         <p style={{ marginBottom: "25px" }}>
           <strong>Tech:</strong> React, Machine Learning, YOLOv8, ViT
         </p>
-
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          <a href="/" className="btn">
-            Live Demo
-          </a>
-          <a href="/" className="btn-outline">
-            GitHub
-          </a>
-        </div>
       </div>
 
-      {/* 📦 OTHER PROJECTS */}
+      {/* OTHER PROJECTS */}
       <div className="container">
         <h2 className="section-title">Other Projects</h2>
 
@@ -174,71 +159,69 @@ const Projects = () => {
             gap: "25px",
           }}
         >
-          {/* 🌸 FLORALANE */}
+          {/* FLORALANE */}
           <div className="card" style={{ textAlign: "center" }}>
-            
-            {/* LOGO WITH GLOW */}
-        <img
-            src={FloraLogo}
-            alt="FloraLane Logo"
-            style={{
+            <img
+              src={FloraLogo}
+              alt="FloraLane Logo"
+              style={{
                 width: "110px",
                 marginBottom: "15px",
                 filter: "drop-shadow(0 0 12px rgba(236,72,153,0.7))",
                 transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
+              }}
+              onMouseEnter={(e) => {
                 e.target.style.transform = "scale(1.08)";
                 e.target.style.filter =
-                "drop-shadow(0 0 18px rgba(236,72,153,0.9))";
-            }}
-        onMouseLeave={(e) => {
+                  "drop-shadow(0 0 18px rgba(236,72,153,0.9))";
+              }}
+              onMouseLeave={(e) => {
                 e.target.style.transform = "scale(1)";
                 e.target.style.filter =
-                "drop-shadow(0 0 12px rgba(236,72,153,0.7))";
-            }}
-        />
+                  "drop-shadow(0 0 12px rgba(236,72,153,0.7))";
+              }}
+            />
 
-            <h3 style={{ marginBottom: "10px" }}>
-              FloraLane – Flower Shopping App
-            </h3>
-
+            <h3>FloraLane – Flower Shopping App</h3>
             <p className="section-text">
-              Developed an e-commerce mobile and web application using Flutter,
-              HTML, CSS, and PHP with secure login, payment integration, and a
-              responsive user interface.
-            </p>
-
-            <p style={{ marginTop: "15px" }}>
-              <strong>Tech:</strong> Flutter, PHP, HTML, CSS
+              E-commerce app with secure login and payment.
             </p>
           </div>
 
-          {/* PROJECT 2 */}
-          <div className="card">
-            <h3 style={{ marginBottom: "10px" }}>
-              PastaGo 
-            </h3>
+          {/* 🍝 PASTAGO */}
+          <div className="card" style={{ textAlign: "center" }}>
+            <img
+              src={PastaLogo}
+              alt="PastaGo Logo"
+              style={{
+                width: "110px",
+                marginBottom: "15px",
+                filter: "drop-shadow(0 0 12px rgba(236,72,153,0.7))",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "scale(1.08)";
+                e.target.style.filter =
+                  "drop-shadow(0 0 18px rgba(236,72,153,0.9))";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "scale(1)";
+                e.target.style.filter =
+                  "drop-shadow(0 0 12px rgba(236,72,153,0.7))";
+              }}
+            />
+
+            <h3>PastaGo</h3>
             <p className="section-text">
-              A modern and user-friendly mobile application designed to simplify the food ordering experience by allowing customers to browse restaurant menus, select their favorite dishes, and place orders quickly and efficiently, all from their mobile devices. 
-            </p>
-            <p style={{ marginTop: "15px" }}>
-              <strong>Tech:</strong> Data Mining, Decision Trees
+              A modern mobile app for ordering food quickly and efficiently.
             </p>
           </div>
 
           {/* PROJECT 3 */}
           <div className="card">
-            <h3 style={{ marginBottom: "10px" }}>
-              PHILPOST Mail Inventory System
-            </h3>
+            <h3>PHILPOST Mail Inventory System</h3>
             <p className="section-text">
-              Designed a digital mail tracking system with OCR-based data entry,
-              improving efficiency and reducing errors through real-time
-              tracking and automation.
-            </p>
-            <p style={{ marginTop: "15px" }}>
-              <strong>Tech:</strong> OCR, Web System
+              OCR-based mail tracking system with real-time automation.
             </p>
           </div>
         </div>
