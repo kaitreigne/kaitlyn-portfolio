@@ -60,7 +60,7 @@ const Hero = () => {
               fontWeight: "600",
             }}
           >
-            Aspiring IT Developer
+            Aspiring IT Professional
           </h2>
 
           {/* DESCRIPTION */}
@@ -73,7 +73,7 @@ const Hero = () => {
               fontSize: "16px",
             }}
           >
-            An adaptable and driven developer capable of building modern web and mobile applications with strong attention to usability and performance. Quick to learn new technologies, flexible in different roles, and ready to contribute effectively in real-world development environments.
+            An adaptable and driven IT graduate with experience in developing web and mobile applications. Knowledgeable in networking, system troubleshooting, and secure coding practices. Quick to learn new technologies and eager to contribute to real-world IT and development environments.
           </p>
 
           {/* BUTTONS */}

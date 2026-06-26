@@ -1,5 +1,5 @@
 import { useState } from "react";
-import KaitlynImg from "../assets/Graduation.png";
+import KaitlynImg from "../assets/Graduation.jpg";
 import CCSImg from "../assets/StudentCouncil.jpg";
 import TempestImg from "../assets/Creatives.jpg";
 
@@ -13,7 +13,7 @@ const About = () => {
       title:
         "Bachelor of Science in Information Technology — Batch 2026",
       description:
-        "Graduated with a strong foundation in software development, equipped with both technical knowledge and practical experience in building real-world applications.",
+        "Passionate about technology with interests in software development, networking, and IT infrastructure. Experienced in developing web and mobile applications while continuously expanding my knowledge in system administration and secure technology solutions.",
     },
     {
       id: "ccs",
@@ -25,7 +25,7 @@ const About = () => {
     {
       id: "tempest",
       image: TempestImg,
-      title: "Creatives Designer — Tempest Gaming Society",
+      title: "Assistant Publications Head — Tempest Gaming Society",
       description:
         "Worked as a creatives designer, producing visual content and enhancing design skills while contributing to branding, engagement, and communication within the organization.",
     },

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Swade1 from "../assets/swade1.png";
 import Swade3 from "../assets/swade3.png";
 import FloraLogo from "../assets/FloraLogo.png";
-import PastaLogo from "../assets/PastaLogo.png"; // 👈 ADD THIS
+import PastaLogo from "../assets/PastaLogo.png";
 
 const slides = [
   { type: "image", src: Swade1 },
@@ -25,7 +25,6 @@ const Projects = () => {
 
   return (
     <section id="projects" style={{ padding: "100px 0" }}>
-      
       <div className="container">
         <h2 className="section-title">Featured Project</h2>
       </div>
@@ -134,13 +133,20 @@ const Projects = () => {
           SWADE — Sidewalk Accessibility through Data-driven Evaluation using Machine Learning
         </h3>
 
-        <p className="section-text" style={{ marginBottom: "15px", lineHeight: "1.8" }}>
+        <p
+          className="section-text"
+          style={{ marginBottom: "15px", lineHeight: "1.8" }}
+        >
           SWADE is a mobile and web-based system that evaluates sidewalk
           accessibility for persons with disabilities using machine learning.
         </p>
 
-        <p className="section-text" style={{ marginBottom: "20px", lineHeight: "1.8" }}>
-          Uses <strong>YOLOv8</strong> and <strong>ViT</strong> for detection and classification.
+        <p
+          className="section-text"
+          style={{ marginBottom: "20px", lineHeight: "1.8" }}
+        >
+          Uses <strong>YOLOv8</strong> and <strong>ViT</strong> for detection
+          and classification.
         </p>
 
         <p style={{ marginBottom: "25px" }}>
@@ -188,7 +194,7 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* 🍝 PASTAGO */}
+          {/* PASTAGO */}
           <div className="card" style={{ textAlign: "center" }}>
             <img
               src={PastaLogo}
@@ -217,8 +223,8 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* PROJECT 3 */}
-          <div className="card">
+          {/* PHILPOST */}
+          <div className="card" style={{ textAlign: "center" }}>
             <h3>PHILPOST Mail Inventory System</h3>
             <p className="section-text">
               OCR-based mail tracking system with real-time automation.
@@ -226,7 +232,6 @@ const Projects = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };
