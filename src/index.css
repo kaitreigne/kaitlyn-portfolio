@@ -22,6 +22,12 @@
 
 html {
   scroll-behavior: smooth;
+  background: #1a0b14;
+}
+
+#root {
+  background: #1a0b14;
+  min-height: 100vh;
 }
 
 /* BODY */
