@@ -1,0 +1,120 @@
+/* ========================================= */
+/* HERO ROLE TITLE */
+/* ========================================= */
+
+.hero-role {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 22px 0 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ========================================= */
+/* BUTTONS */
+/* ========================================= */
+
+.btn-primary,
+.btn-outline {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.4);
+}
+
+.btn-outline:hover {
+  background: #ec4899;
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+/* ========================================= */
+/* IMAGE */
+/* ========================================= */
+
+.hero-image {
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+/* ========================================= */
+/* GLASS BADGE */
+/* ========================================= */
+
+.hero-badge {
+  transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.25);
+}
+
+/* ========================================= */
+/* ANIMATION */
+/* ========================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  .hero-role {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: 40px !important;
+    text-align: center;
+  }
+
+  #home p {
+    text-align: center;
+  }
+
+  #home .container {
+    flex-direction: column-reverse !important;
+    gap: 50px !important;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .hero-role {
+    font-size: 24px;
+  }
+
+  #home h1 {
+    font-size: 34px !important;
+  }
+}
