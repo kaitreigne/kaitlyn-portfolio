@@ -27,7 +27,7 @@ const Navbar = () => {
             fontWeight: "600",
           }}
         >
-          Kaitlyn
+        { Kaitlyn }
         </h2>
 
         {/* LINKS */}
